@@ -1,4 +1,6 @@
 auth_config.json
+
+## from this example https://github.com/vuejs-templates/webpack-simple/blob/master/template/.gitignore
 .DS_Store
 node_modules/
 dist/
