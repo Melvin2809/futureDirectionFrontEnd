@@ -19,6 +19,9 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <router-link to="/" class="nav-link">Home</router-link>
+              <router-link to="/formations" class="nav-link">Formations</router-link>
+              <router-link to="/ecoles" class="nav-link">Ecoles</router-link>
+              <router-link to="/salaires" class="nav-link">Salaires</router-link>
             </li>
           </ul>
           <ul class="navbar-nav d-none d-md-block">
