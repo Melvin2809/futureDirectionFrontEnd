@@ -1,12 +1,9 @@
 <template>
-  <div class="text-center hero">
-    <img class="mb-3 app-logo" src="/logo.png" alt="Vue.js logo" width="120" />
-    <h1 class="mb-4">Future Direction</h1>
+  <div class="text-center hero" >
+    <img class="mb-4 app-logo" src="img/Capture.PNG" alt="" width="120" />
+    <h1 class="mb-4">Welcome to future direction</h1>
     <p class="lead">
-      Raphael This is a sample application that demonstrates an authentication flow for an SPA, using
-      <a
-        href="https://vuejs.org"
-      >Vue.js</a>
+      you need help finding your way, we offer orientation assistance for your future
     </p>
   </div>
 </template>
