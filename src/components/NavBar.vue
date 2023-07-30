@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-container mb-3">
+  <div class="nav-container mb-3" >
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container">
         <div class="navbar-brand logo"></div>
@@ -16,14 +16,21 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav m-auto" >
             <li class="nav-item">
               <router-link to="/" class="nav-link">Home</router-link>
-              <router-link to="/formations" class="nav-link">Formations</router-link>
+            </li>
+            <li>
+              <router-link to="/Formations" class="nav-link">Formations</router-link>
+            </li>
+            <li>
               <router-link to="/ecoles" class="nav-link">Ecoles</router-link>
+            </li>
+            <li>
               <router-link to="/salaires" class="nav-link">Salaires</router-link>
             </li>
           </ul>
+          
           <ul class="navbar-nav d-none d-md-block">
             <li v-if="!isAuthenticated && !isLoading" class="nav-item">
               <button
@@ -127,4 +134,6 @@ export default {
   min-height: 125px;
   justify-content: space-between;
 }
+
+
 </style>
