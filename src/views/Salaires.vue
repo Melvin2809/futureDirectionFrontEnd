@@ -1,6 +1,6 @@
 <template>
     <div>
-        Comparaisons de Salaires <br>
+      <h1>Comparaisons de Salaires <br></h1>
     </div>
     <br><br>
 

@@ -1,7 +1,7 @@
 <template>
   <div >
-      Voici les Formations
-    </div>
+    <h1>Voici les Formations</h1>
+  </div>
 
   <div>
     <hero />

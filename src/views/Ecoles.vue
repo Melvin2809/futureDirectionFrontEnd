@@ -1,6 +1,6 @@
 <template>
     <div>
-        Voici les Ecoles <br>
+        <h1>Voici les Ecoles</h1> <br>
     </div>
     <br><br>
 
