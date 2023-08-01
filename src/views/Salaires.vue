@@ -12,7 +12,7 @@
  import Hero from "../components/Hero.vue"; 
 
   export default {
-    name: "Ecoles-view",
+    name: "Salaires-view",
     components:{
         Hero
     }
