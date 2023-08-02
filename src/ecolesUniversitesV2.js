@@ -1,15 +1,16 @@
 const reponse = await fetch("futureDirection/src/ecolesUniversites.json");
 EcolesUniversites = await reponse.json();
 
-export function genererEcolesUniversites(EcolesUniversites){
+
+function genererEcolesUniversites(EcolesUniversites){
 	for(let i = 0; i < EcolesUniversites.length; i++){
 
 		const sectionFiches = document.querySelector(".fiches");
 		const ES = EcolesUniversites[i];
 		const EsElement = document.createElement("ES");
         
-		/*const imageElement = document.createElement("img");
-		imageElement.src = article.image;*/
+		const imageElement = document.createElement("img");
+		imageElement.src = article.image;
 
 		const nomElement = document.createElement("h2");
 		nomElement.innerText = ES.nom;
@@ -20,9 +21,9 @@ export function genererEcolesUniversites(EcolesUniversites){
 		
         
 		//Code ajouté
-		/*const avisBouton = document.createElement("button");
+		const avisBouton = document.createElement("button");
 		avisBouton.dataset.id = article.id;
-		avisBouton.textContent = "Afficher les avis";*/
+		avisBouton.textContent = "Afficher les avis";
 
 
 		// Rattachement de nos balises au DOM (ajout réel à la page web) "const sectionFiches = document.querySelector(".fiches");"
@@ -35,6 +36,11 @@ export function genererEcolesUniversites(EcolesUniversites){
 	
     
 	}
+	return;
 }
+
+export{genererEcolesUniversites}
+
+
 // Premier affichage de la page
-genererEcolesUniversites(EcolesUniversites);
+//genererEcolesUniversites(EcolesUniversites);
