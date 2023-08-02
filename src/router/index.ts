@@ -2,7 +2,7 @@ import { createRouter as createVueRouter, createWebHashHistory, Router } from "v
 import Home from "../views/Home.vue";
 import Profile from "../views/Profile.vue";
 import Formations from"../views/Formations.vue";
-import Universites from"../views/Universites.vue";
+import ecolesUniversites from"../views/ecolesUniversites.vue";
 import Salaires from"../views/Salaires.vue";
 
 import { createAuthGuard } from "@auth0/auth0-vue";
@@ -28,9 +28,9 @@ export function createRouter(app: App): Router {
         component: Formations
       },
       {
-        path: "/Universites",
-        name: "universites",
-        component: Universites
+        path: "/ecolesUniversites",
+        name: "ecolesUniversites",
+        component: ecolesUniversites
       },
       {
         path: "/Salaires",

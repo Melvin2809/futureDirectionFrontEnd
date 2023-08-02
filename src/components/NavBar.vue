@@ -24,7 +24,7 @@
               <router-link to="/Formations" class="nav-link">Formations</router-link>
             </li>
             <li>
-              <router-link to="/universites" class="nav-link">Universites</router-link>
+              <router-link to="/ecolesUniversites" class="nav-link">Ecoles-Universités</router-link>
             </li>
             <li>
               <router-link to="/salaires" class="nav-link">Salaires</router-link>
