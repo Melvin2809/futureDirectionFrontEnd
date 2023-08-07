@@ -11,7 +11,7 @@
       <div class="logo"></div>
       <p>
         
-        <a href="guirchounmelvin@gmail.com">Nous contacter</a>
+        <a :href="'mailto:guirchounmelvin@gmail.com'">Nous contacter</a>
       </p>
     </footer>
   </div>
