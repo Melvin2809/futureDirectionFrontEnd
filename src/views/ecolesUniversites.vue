@@ -2,21 +2,24 @@
   <div class="content-container">
     <div class="universites-container">
       <!--<pre>{{ JSON.stringify(jsonData, null, 2) }}</pre>-->
-      <div v-for="(universite, index) in universites" :key="index">
-        <img :src="universite.image" @click="afficherInfos(universite)">
+      <div v-for="u in universite" :key="u.id">
+        <div class="image-container">
+          <img :src="u.image" class="myImage">
+          <div class="infos-card">
+            <h2>{{ u.nom}}</h2><br>
+            <p>{{ u.adresse }}</p>
+            <p>{{ u.telephone }}</p>
+            <a :href="u.description" target="_blank">description</a><br>
+            <span class="spacer"></span> 
+            <a :href="u.reputation" target="_blank" class="spacing">Réputation académique</a>
+          </div>
+        </div>
+        <br><br>  
       </div>
     </div>
 
-    <div v-if="infosVisibles" class="infos-conainer">
-      <div class="infos-card">
-        <h2>{{ universiteSelectionnee.nom}}</h2><br>
-        <p>{{ universiteSelectionnee.adresse }}</p>
-        <p>{{ universiteSelectionnee.telephone }}</p>
-        <a :href="universiteSelectionnee.description" target="_blank">description</a><br>
-        <span class="spacer"></span> 
-        <a :href="universiteSelectionnee.reputation" target="_blank" class="spacing">Réputation académique</a>
-      </div>
-    </div>
+    <!--<div v-if="infosVisibles" class="infos-container">
+    </div>-->
   </div>
   
     <br><br>
@@ -30,6 +33,7 @@
 import Hero from "../components/Hero.vue";
 import jsonData  from "@/ecolesUniversites.json"
 import VueJsonPretty from 'vue-json-pretty';
+import axios from 'axios';
 
 interface Universite {
   nom: string;
@@ -49,35 +53,43 @@ export default {
   data(){
     return{
       universites: jsonData,
-      universiteSelectionnee:{},
-      infosVisibles: false
+      universite: []
     }
   },
-  methods:{
-    afficherInfos(universite : Universite) {
-      this.universiteSelectionnee = universite;
-      this.infosVisibles = true;
-    }
+  mounted() {
+    // Effectuer la requête HTTP pour récupérer les données depuis le serveur
+    axios.get('https://my-json-server.typicode.com/Melvin2809/futureDirectionBackEnd/ecoles')
+      .then(response => {
+        this.universite = response.data;
+      })
+      .catch(error => {
+        console.error('Erreur lors de la récupération des données :', error);
+      });
   }
   
+
+  
+  
 }
-</script>
+</script> 
 
 <style>
 .content-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-  gap: 20px; /* Espacement entre les colonnes */
+  
+  /*grid-template-columns: 1fr;  Deux colonnes égales */
+
+  width: 100%;
+  
 }
 
 .spacer {
   display: inline-block;
-  margin: 3%;
+  margin: 1.5%;
   
 } 
 
-.universite {
-  display: block;     
+.universite-container {
+  height: 10%;
 }
 
 .universite-card {
@@ -86,6 +98,8 @@ export default {
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+;
 }
 
 .spacing{
@@ -93,10 +107,25 @@ export default {
 }
 
 .infos-card {
-  background-color: #f8ffff;
+  
+  background-color: #ffffff;
   /*border: 1px solid #ccc;*/
-  padding: 20px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-color: aliceblue;
 }
+
+.image-container{
+  height: 400px;
+  border: 1px solid #d9d4d4;
+}
+
+.myImage{
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+
+
 </style>
