@@ -2,7 +2,7 @@
   <div class="content-container">
     <div class="universites-container">
       <!--<pre>{{ JSON.stringify(jsonData, null, 2) }}</pre>-->
-      <div v-for="u in universite" :key="u.id">
+      <div v-for=" u in universite" :key="u.id">
         <div class="image-container">
           <img :src="u.image" class="myImage">
           <div class="infos-card">
@@ -31,18 +31,9 @@
 
 <script lang="ts">
 import Hero from "../components/Hero.vue";
-import jsonData  from "@/ecolesUniversites.json"
 import VueJsonPretty from 'vue-json-pretty';
 import axios from 'axios';
 
-interface Universite {
-  nom: string;
-  adresse: string;
-  telephone: string;
-  image: string;
-  description: string;
-  reputation: string;
-}
 
 export default {
   name: "ecolesUniversites-view",
@@ -52,7 +43,6 @@ export default {
   },
   data(){
     return{
-      universites: jsonData,
       universite: []
     }
   },

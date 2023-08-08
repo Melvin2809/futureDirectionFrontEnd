@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "start": "json-server --port 8081 --no-cors db.json"
   },
   "dependencies": {
+    "json-server": "^0.17.0",
     "@auth0/auth0-vue": "^2.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
