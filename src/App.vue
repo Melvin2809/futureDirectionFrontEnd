@@ -15,11 +15,13 @@
       </p>
     </footer>
   </div>
+  
 </template>
 
 <script lang="ts">
 import NavBar from "./components/NavBar.vue";
 import Error from "./components/Error.vue";
+import PaginationBar from "./components/PaginationBar.vue";
 
 export default {
   components: {
