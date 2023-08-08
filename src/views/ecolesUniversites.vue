@@ -1,8 +1,8 @@
 <template>
   <div class="content-container">
     <div class="universites-container">
-      <!--<pre>{{ JSON.stringify(jsonData, null, 2) }}</pre>-->
-      <div v-for=" u in universite" :key="u.id">
+      <!--<pre>{{ JSON.stringify(universite, null, 2) }}</pre>-->
+      <div v-for="(u, index) in universite" :key="index">
         <div class="image-container">
           <img :src="u.image" class="myImage">
           <div class="infos-card">
@@ -32,7 +32,20 @@
 <script lang="ts">
 import Hero from "../components/Hero.vue";
 import VueJsonPretty from 'vue-json-pretty';
-import axios from 'axios';
+//import axios from 'axios'; import pour le back end
+import universites from "@/db.json";
+
+/*
+interface Universite {
+  id: string;
+  nom: string;
+  adresse: string;
+  telephone: string;
+  image: string;
+  description: string;
+  reputation: string;
+  salaire: string; 
+}*/
 
 
 export default {
@@ -43,9 +56,12 @@ export default {
   },
   data(){
     return{
-      universite: []
+      //Pour rattaché le back end on front end* universite: []
+      universite: universites // Utilisation du type Universite
     }
   },
+  /*Pour rattaché le back end on front end
+
   mounted() {
     // Effectuer la requête HTTP pour récupérer les données depuis le serveur
     axios.get('https://my-json-server.typicode.com/Melvin2809/futureDirectionBackEnd/ecoles')
@@ -55,11 +71,7 @@ export default {
       .catch(error => {
         console.error('Erreur lors de la récupération des données :', error);
       });
-  }
-  
-
-  
-  
+  }*/
 }
 </script> 
 
