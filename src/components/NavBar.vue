@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-container mb-3" >
+  <div class="nav-container mb-1" >
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container">
         <div class="navbar-brand logo"></div>
@@ -134,6 +134,20 @@ export default {
   min-height: 125px;
   justify-content: space-between;
 }
+
+.btn{
+  border-radius: 5px; /* Ajustez la valeur selon le degré d'arrondi souhaité */
+  padding: 10px 20px; /* Ajoutez du rembourrage pour améliorer l'apparence */
+  background-color: #0e0f0f;
+  color: rgb(192, 233, 247);
+  border: none;
+}
+
+nav{
+  height: 70px;
+}
+
+
 
 
 </style>
