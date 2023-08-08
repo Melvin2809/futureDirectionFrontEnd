@@ -28,7 +28,7 @@
 
     <div class="universites-container">
       <!--<pre>{{ JSON.stringify(universite, null, 2) }}</pre>-->
-      <div v-for="(u, index) in universite" :key="index" class="universite-item">
+      <div v-for="(u, index) in donnees" :key="index" class="universite-item">
         <div class="image-container">
           <div class="infos-card">
             <div class="header">
@@ -73,25 +73,13 @@
 </template>
 
 
-
 <script lang="ts">
 import Hero from "../components/Hero.vue";
 import VueJsonPretty from 'vue-json-pretty';
-//import axios from 'axios'; import pour le back end
-import universites from "@/db.json";
+import axios from 'axios'; //import pour le back end
 import PaginationBar from "@/components/PaginationBar.vue";
+import ApiService from '@/api.js';
 
-/*
-interface Universite {
-  id: string;
-  nom: string;
-  adresse: string;
-  telephone: string;
-  image: string;
-  description: string;
-  reputation: string;
-  salaire: string; 
-}*/
 
 
 export default {
@@ -108,7 +96,7 @@ export default {
   data(){
     return{
       //Pour rattaché le back end on front end* universite: []
-      universite: universites // Utilisation du type Universite
+      donnees: [], // Utilisation du type Universite
     }
   },
   /*Pour rattaché le back end on front end
@@ -125,10 +113,36 @@ export default {
   }*/
 
   methods: {
+    async ajouterDonnee() {
+      this.donnees.push("Nouvelle donnée");
+      await this.mettreAJourDonneesServeur();
+    },
+    async mettreAJourDonneesServeur() {
+      try {
+        await ApiService.mettreAJourDonnees(this.donnees);
+      } catch (error) {
+        console.error("Erreur lors de la mise à jour des données sur le serveur", error);
+      }
+    },
+    async recupererDonneesServeur() {
+      try {
+        const response = await ApiService.getDonnees();
+        this.donnees = response.data;
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données depuis le serveur", error);
+      }
+    },
     changePage(pageNumber) {
       this.$emit('page-change', pageNumber);
     }
-  }
+  },
+  created() {
+    this.recupererDonneesServeur();
+    this.mettreAJourDonneesServeur();
+  },
+
+
+  
 }
 </script> 
 

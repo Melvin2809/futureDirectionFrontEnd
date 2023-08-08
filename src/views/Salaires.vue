@@ -15,7 +15,7 @@
 
 import Hero from "../components/Hero.vue";
 import axios from 'axios';
-import universites from "@/db.json";
+import universites from "../api";
 
 
 export default {
@@ -38,6 +38,31 @@ export default {
         console.error('Erreur lors de la récupération des données :', error);
       });
   }*/
+
+  methods: {
+    async ajouterDonnee() {
+      this.donnees.push("Nouvelle donnée");
+      await this.mettreAJourDonneesServeur();
+    },
+    async mettreAJourDonneesServeur() {
+      try {
+        await ApiService.mettreAJourDonnees(this.donnees);
+      } catch (error) {
+        console.error("Erreur lors de la mise à jour des données sur le serveur", error);
+      }
+    },
+    async recupererDonneesServeur() {
+      try {
+        const response = await ApiService.getDonnees();
+        this.donnees = response.data;
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données depuis le serveur", error);
+      }
+    },
+  },
+  created() {
+    this.recupererDonneesServeur();
+  },
   
 }
 </script>

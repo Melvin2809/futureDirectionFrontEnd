@@ -1,5 +1,6 @@
-[
-    {
+{
+    "ecoles": [
+        {
         "Nombre d'etudiants en moyenne":48000,
         "secteur":"Université",
         "nom": "Paris-Saclay",
@@ -102,9 +103,6 @@
         "description": "",
         "reputation": 10
     }
-    
-    
-    
-    
-    
-]
+
+    ]
+}
