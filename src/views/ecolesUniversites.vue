@@ -14,7 +14,7 @@
     <div class="filter-container">
       <div class="filter">
         <h2>Filtrer les entreprises</h2>
-        Affichage de 1-5 entreprises sur 10
+        Affichage de 1-10 entreprises sur 10
         <hr>
         <p>Lieu</p>
         <input type="text" placeholder="Sélectionnez un lieu">
