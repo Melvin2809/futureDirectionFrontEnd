@@ -255,12 +255,12 @@ h2{
 .search-bar{
   text-align: center;
   margin-left: 0px;
-  margin-top: 15px;
+  margin-top: 30px;
   
 }
 
 .rounded-button {
-  border-radius: 5px; /* Ajustez la valeur selon le degré d'arrondi souhaité */
+  border-radius: 30px; /* Ajustez la valeur selon le degré d'arrondi souhaité */
   padding: 4px 20px; /* Ajoutez du rembourrage pour améliorer l'apparence */
   background-color: #3437db;
   color: white;
@@ -271,7 +271,7 @@ h2{
 
 input[type="text"] {
   border: 1px solid #d9d4d4; /* Remplacez #3498db par la couleur de bordure souhaitée */
-  border-radius: 3px;
+  border-radius: 30px;
   margin-left: 5px;
   width: 300px;
   padding-left: 10px;
