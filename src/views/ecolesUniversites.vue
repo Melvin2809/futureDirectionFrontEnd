@@ -133,6 +133,15 @@ export default {
         console.error("Erreur lors de la récupération des données depuis le serveur", error);
       }
     },
+    async supprimerDonnee(id) {
+      try {
+        await axios.delete(`${API_URL}/ecoles/${id}`);
+        // Après la suppression, mettez à jour les données depuis le serveur
+        await this.recupererDonneesServeur();
+      } catch (error) {
+        console.error("Erreur lors de la suppression des données sur le serveur", error);
+      }
+    },
     changePage(pageNumber) {
       this.$emit('page-change', pageNumber);
     }
