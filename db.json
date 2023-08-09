@@ -1,6 +1,6 @@
-{
-    "ecoles": [
-        {
+[
+    {
+        "id":1,
         "Nombre d'etudiants en moyenne":48000,
         "secteur":"Université",
         "nom": "Paris-Saclay",
@@ -12,6 +12,7 @@
         "salaire": "https://www.universite-paris-saclay.fr/actualites/la-situation-professionnelle-des-docteures-de-luniversite-paris-saclay-au-1er-decembre-2019#:~:text=Avec%20un%20doctorat%20en%20poche,m%C3%A9diane%20en%20de%2041.538%E2%82%AC."
     },
     {
+        "id":2,
         "Nombre d'etudiants en moyenne":9400,
         "secteur":"Université",
         "nom": "Paris Dauphine - PSL",
@@ -23,6 +24,7 @@
         "salaire": "https://dauphine.psl.eu/dauphine/media-et-communication/article/enquete-cge-dexcellents-resultats-pour-linsertion-pro-de-nos-diplomes#:~:text=Les%20jeunes%20dipl%C3%B4m%C3%A9s%20de%20Dauphine,2021)%20et%20sup%C3%A9rieure%20%C3%A0%20la"
     },
     {
+        "id":3,
         "Nombre d'etudiants en moyenne":43700,
         "secteur":"Université",
         "nom": "Paris 1 Panthéon-Sorbonne",
@@ -34,6 +36,7 @@
         "salaire": "https://data.pantheonsorbonne.fr/insertion-professionnelle/insertion-professionnelle-apres-master"
     },
     {
+        "id":4,
         "Nombre d'etudiants en moyenne":8200,
         "secteur":"Ecole",
         "nom": "Institut Polytechnique de Paris",
@@ -44,6 +47,7 @@
         "reputation": 2
     },
     {
+        "id":5,
         "Nombre d'etudiants en moyenne":55600,
         "secteur":"Université",
         "nom": "Sorbonne Université",
@@ -54,6 +58,7 @@
         "reputation": 3
     },
     {
+        "id":6,
         "Nombre d'etudiants en moyenne":2361,
         "secteur":"Ecole",
         "nom": "École Normale Supérieure de Lyon",
@@ -64,6 +69,7 @@
         "reputation": 5
     },
     {
+        "id":7,
         "Nombre d'etudiants en moyenne":2361,
         "secteur":"Ecole",
         "nom": "Ecole des Ponts ParisTech",
@@ -74,6 +80,7 @@
         "reputation": 6
     },
     {
+        "id":8,
         "Nombre d'etudiants en moyenne":2361,
         "secteur":"Ecole",  
         "nom": "Sciences Po Paris",
@@ -84,6 +91,7 @@
         "reputation": 7
     },
     {
+        "id":9,
         "Nombre d'etudiants en moyenne":2361,
         "secteur":"Université",
         "nom": "Université de Paris",
@@ -94,6 +102,7 @@
         "reputation": 8
     },
     {
+        "id":10,
         "Nombre d'etudiants en moyenne":2361,
         "secteur":"Université",
         "nom": "Université Grenoble Alpes",
@@ -104,5 +113,4 @@
         "reputation": 10
     }
 
-    ]
-}
+]

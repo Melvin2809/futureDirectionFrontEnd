@@ -7,6 +7,7 @@ export default {
     return axios.get(`${API_URL}/ecoles`);
   },
   mettreAJourDonnees(donnees) {
-    return axios.put(`${API_URL}/ecoles`, donnees);
+    const id = 1; // Remplacez par l'ID de la ressource que vous voulez mettre à jour
+    return axios.put(`${API_URL}/ecoles/${id}`, donnees);
   },
 };

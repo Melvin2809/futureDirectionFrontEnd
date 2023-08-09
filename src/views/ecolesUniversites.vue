@@ -114,7 +114,7 @@ export default {
 
   methods: {
     async ajouterDonnee() {
-      this.donnees.push("Nouvelle donnée");
+      this.donnees.push();
       await this.mettreAJourDonneesServeur();
     },
     async mettreAJourDonneesServeur() {
@@ -128,6 +128,7 @@ export default {
       try {
         const response = await ApiService.getDonnees();
         this.donnees = response.data;
+        
       } catch (error) {
         console.error("Erreur lors de la récupération des données depuis le serveur", error);
       }
