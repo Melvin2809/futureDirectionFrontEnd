@@ -1,3 +1,8 @@
+# Scenario #1 - Logging In and Gated Content
+
+<img width="955" height="493" alt="image" src="https://github.com/user-attachments/assets/22dbce38-7f72-4756-916e-cccc0400a13a" />
+
+<img width="825" height="491" alt="image" src="https://github.com/user-attachments/assets/ac48eaf3-faee-4483-98b5-6aeedc7b02d0" />
 
 <img width="892" height="418" alt="image" src="https://github.com/user-attachments/assets/0eada38a-82ea-4f23-a5ae-e50925f38635" />
 
@@ -5,12 +10,9 @@
 
 <img width="949" height="490" alt="image" src="https://github.com/user-attachments/assets/59c4dae0-07e1-449a-83de-85d0b066fcc6" />
 
-<img width="955" height="493" alt="image" src="https://github.com/user-attachments/assets/22dbce38-7f72-4756-916e-cccc0400a13a" />
-
-<img width="825" height="491" alt="image" src="https://github.com/user-attachments/assets/ac48eaf3-faee-4483-98b5-6aeedc7b02d0" />
 
 
-# Scenario #1 - Logging In and Gated Content
+
 
 This sample demonstrates:
 
